@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2 class="mb-0">Notícias</h2>
     <div>
-        <button id="btnCreate" class="btn btn-primary me-2">
+        <button id="btnCreate" type="button" class="btn btn-primary me-2">
             Nova Notícia
         </button>
         <a href="/Tag" class="btn btn-secondary">
@@ -26,6 +26,7 @@
 }
 else
 {
+    @Html.AntiForgeryToken()
     <table class="table table-bordered align-middle">
         <thead class="table-light">
             <tr>
@@ -53,16 +54,12 @@ else
                     </td>
                     <td>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-warning" onclick="editarNoticia(@n.Id)">
-                                <i class="bi bi-pencil"></i> Editar
+                            <button type="button" class="btn btn-sm btn-warning" onclick="editarNoticia(@n.Id)">
+                                Editar
                             </button>
-                            <form asp-action="Delete" method="post" style="display:inline">
-                                @Html.AntiForgeryToken()
-                                <input type="hidden" name="id" value="@n.Id" />
-                                <button type="submit" class="btn btn-sm btn-danger">
-                                    <i class="bi bi-trash"></i> Excluir
-                                </button>
-                            </form>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="excluirNoticia(@n.Id)">
+                                Excluir
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -81,5 +78,56 @@ else
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/js/noticia.js"></script>
+    <script>
+        $('#btnCreate').click(function () {
+            $.get('/Noticia/Create', function (html) {
+                $('#modalBody').html(html);
+                $('#modalNoticia').modal('show');
+            });
+        });
+
+        function editarNoticia(id) {
+            $.get('/Noticia/Edit/' + id, function (html) {
+                $('#modalBody').html(html);
+                $('#modalNoticia').modal('show');
+            });
+        }
+
+        function salvarNoticia() {
+            var form = $('#formNoticia');
+            $.ajax({
+                url: form.attr('action'),
+                method: 'POST',
+                data: form.serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        $('#modalNoticia').modal('hide');
+                        location.reload();
+                    } else {
+                        $('#modalBody').html(result);
+                    }
+                },
+                error: function () {
+                    alert('Erro ao salvar notícia.');
+                }
+            });
+            return false;
+        }
+
+        function excluirNoticia(id) {
+            if (!confirm('Deseja realmente excluir esta notícia?')) return;
+
+            $.ajax({
+                url: '/Noticia/Delete/' + id,
+                method: 'POST',
+                headers: { 'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val() },
+                success: function () {
+                    location.reload();
+                },
+                error: function () {
+                    alert('Erro ao excluir notícia.');
+                }
+            });
+        }
+    </script>
 }

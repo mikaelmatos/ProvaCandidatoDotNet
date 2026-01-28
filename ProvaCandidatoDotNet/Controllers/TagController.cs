@@ -13,18 +13,14 @@ namespace ProvaCandidatoDotNet.Controllers
         {
             _context = context;
         }
-
-        // GET: /Tag
         public async Task<IActionResult> Index()
         {
             var tags = await _context.Tags.AsNoTracking().OrderBy(t => t.Nome).ToListAsync();
             return View(tags);
         }
 
-        // GET: /Tag/Create
         public IActionResult Create() => View();
 
-        // POST: /Tag/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Tag tag)
@@ -37,7 +33,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: /Tag/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
             var tag = await _context.Tags.FindAsync(id);
@@ -45,7 +40,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return View(tag);
         }
 
-        // POST: /Tag/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Tag tag)
@@ -58,7 +52,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // POST: /Tag/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)

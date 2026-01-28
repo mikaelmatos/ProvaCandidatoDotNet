@@ -14,7 +14,6 @@ namespace ProvaCandidatoDotNet.Controllers
             _context = context;
         }
 
-        // GET: /Noticia
         public async Task<IActionResult> Index()
         {
             var noticias = await _context.Noticias
@@ -27,7 +26,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return View(noticias);
         }
 
-        // GET: /Noticia/Create (Ajax)
         public async Task<IActionResult> Create()
         {
             var vm = new NoticiaViewModel
@@ -37,7 +35,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return PartialView("_NoticiaFormPartial", vm);
         }
 
-        // GET: /Noticia/Edit/5 (Ajax)
         public async Task<IActionResult> Edit(int id)
         {
             var noticia = await _context.Noticias
@@ -59,7 +56,6 @@ namespace ProvaCandidatoDotNet.Controllers
             return PartialView("_NoticiaFormPartial", vm);
         }
 
-        // POST: /Noticia/Save (Ajax)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Save(NoticiaViewModel vm)
@@ -95,12 +91,10 @@ namespace ProvaCandidatoDotNet.Controllers
                 noticia.Conteudo = vm.Conteudo;
                 noticia.DataPublicacao = vm.DataPublicacao;
 
-                // Remove vínculos antigos
                 _context.NoticiaTags.RemoveRange(noticia.NoticiaTags);
                 noticia.NoticiaTags.Clear();
             }
 
-            // Adiciona novas tags
             if (vm.SelectedTagIds?.Any() == true)
             {
                 foreach (var tagId in vm.SelectedTagIds.Distinct())
@@ -114,18 +108,19 @@ namespace ProvaCandidatoDotNet.Controllers
             return Json(new { success = true });
         }
 
-        // POST: /Noticia/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             var noticia = await _context.Noticias.FindAsync(id);
-            if (noticia != null)
-            {
-                _context.Noticias.Remove(noticia);
-                await _context.SaveChangesAsync();
-            }
-            return RedirectToAction(nameof(Index));
+            if (noticia == null)
+                return Json(new { success = false, message = "Notícia não encontrada." });
+
+            _context.Noticias.Remove(noticia);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true });
         }
+
     }
 }

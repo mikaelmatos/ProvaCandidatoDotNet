@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\noticia\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\noticia\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\tag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\tag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\models\\noticia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\models\\noticia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\tag\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\tag\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +46,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
-              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-28T11:38:46.882Z",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Program.cs",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Program.cs",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Program.cs",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:30:44.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Noticia.cs",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Models\\Noticia.cs",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Models\\Noticia.cs",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Models\\Noticia.cs",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Models\\Noticia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:24:40.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Models\\Tag.cs",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Models\\Tag.cs",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Models\\Tag.cs",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Models\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:22:44.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
               "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
               "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
               "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-28T11:37:34.455Z",
+              "WhenOpened": "2026-01-28T18:19:20.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Edit.cshtml",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T18:19:19.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T18:19:18.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Noticia\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Noticia\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Noticia\\Index.cshtml",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Noticia\\Index.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAABwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T18:19:12.107Z",
               "EditorCaption": ""
             }
           ]

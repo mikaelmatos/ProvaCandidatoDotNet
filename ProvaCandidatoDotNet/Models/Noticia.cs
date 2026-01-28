@@ -14,6 +14,8 @@ namespace ProvaCandidatoDotNet.Models
 
         public DateTime DataPublicacao { get; set; } = DateTime.UtcNow;
 
+        public int? UsuarioId { get; set; }
+        public Usuario? Usuario { get; set; }
         public ICollection<NoticiaTag> NoticiaTags { get; set; } = new List<NoticiaTag>();
     }
 }
