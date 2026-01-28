@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\tag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\tag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|c:\\users\\mikael\\source\\repos\\provacandidatodotnet\\provacandidatodotnet\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F44A170C-0C41-4AB7-80A2-83FB6719B796}|ProvaCandidatoDotNet\\ProvaCandidatoDotNet.csproj|solutionrelative:provacandidatodotnet\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T11:38:46.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Mikael\\source\\repos\\ProvaCandidatoDotNet\\ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
+              "RelativeToolTip": "ProvaCandidatoDotNet\\Views\\Tag\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T11:37:34.455Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

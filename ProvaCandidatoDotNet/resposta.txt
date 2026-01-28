@@ -1,0 +1,14 @@
+1) Fluxo dos dados num projeto DDD:
+View > Controller > Application Service > Domain Service/Entities > Repository > Data Source (EF Core/DB).  
+O Controller recebe o ViewModel, envia para a camada de aplicação, que aplica regras de negócio e chama o repositório para persistir.  
+
+2) Autenticação em .NET:
+Podemos usar ASP.NET Identity com Cookie Authentication para MVC ou JWT para APIs.  
+Registrar os serviços com AddAuthentication/AddCookie ou AddJwtBearer, criar endpoints de login/logout e proteger controladores com [Authorize].  
+
+3) Mitigação de performance para 6 consultas:
+Cachear dados (MemoryCache, Redis)
+Executar consultas em paralelo com Task.WhenAll()
+Agrupar regras em menos consultas
+Usar AsNoTracking() e projeções (Select)
+Aplicar OutputCache se aplicável.

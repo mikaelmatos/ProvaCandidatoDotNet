@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ProvaCandidatoDotNet.Models.Noticia>
+
+@{
+    ViewData["Title"] = "Notícias";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Notícias</h2>
+    <div>
+        <button id="btnCreate" class="btn btn-primary me-2">
+            Nova Notícia
+        </button>
+        <a href="/Tag" class="btn btn-secondary">
+            Gerenciar Tags
+        </a>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        Nenhuma notícia cadastrada ainda.
+        <br />
+        Clique em <strong>“Nova Notícia”</strong> para adicionar sua primeira postagem.
+    </div>
+}
+else
+{
+    <table class="table table-bordered align-middle">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 30%;">Título</th>
+                <th style="width: 15%;">Data</th>
+                <th style="width: 35%;">Tags</th>
+                <th style="width: 20%;">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var n in Model)
+            {
+                <tr>
+                    <td>@n.Titulo</td>
+                    <td>@n.DataPublicacao.ToLocalTime().ToString("g")</td>
+                    <td>
+                        @if (n.NoticiaTags.Any())
+                        {
+                            @string.Join(", ", n.NoticiaTags.Select(nt => nt.Tag.Nome))
+                        }
+                        else
+                        {
+                            <span class="text-muted">Sem tags</span>
+                        }
+                    </td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-warning" onclick="editarNoticia(@n.Id)">
+                                <i class="bi bi-pencil"></i> Editar
+                            </button>
+                            <form asp-action="Delete" method="post" style="display:inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@n.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    <i class="bi bi-trash"></i> Excluir
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div id="modalBody"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/noticia.js"></script>
+}
