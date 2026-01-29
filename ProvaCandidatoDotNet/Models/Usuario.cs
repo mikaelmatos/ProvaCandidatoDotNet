@@ -6,17 +6,19 @@ namespace ProvaCandidatoDotNet.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(100)]
+        [Required(ErrorMessage = "O Nome é obrigatório.")]
+        [StringLength(100)]
         public string Nome { get; set; } = string.Empty;
 
-        [Required, StringLength(100)]
-        [EmailAddress]
+        [Required(ErrorMessage = "O E-mail é obrigatório.")]
+        [EmailAddress(ErrorMessage = "Informe um e-mail válido.")]
+        [StringLength(100)]
         public string Email { get; set; } = string.Empty;
 
-        [Required, StringLength(100)]
+        [Required(ErrorMessage = "A Senha é obrigatória.")]
+        [StringLength(100)]
         public string Senha { get; set; } = string.Empty;
 
-        // Relacionamento: um usuário pode criar várias notícias
         public ICollection<Noticia>? Noticias { get; set; }
     }
 }

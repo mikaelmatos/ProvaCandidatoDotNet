@@ -23,6 +23,15 @@
         </div>
 
         <div class="mb-3">
+            <label asp-for="UsuarioId" class="form-label">Autor</label>
+            <select asp-for="UsuarioId" class="form-select"
+                    asp-items="@(new SelectList(Model.UsuariosDisponiveis, "Id", "Nome"))">
+                <option value="">Selecione o autor</option>
+            </select>
+            <span asp-validation-for="UsuarioId" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
             <label>Tags</label>
             <div>
                 @foreach (var tag in Model.TagsDisponiveis)

@@ -6,7 +6,8 @@ namespace ProvaCandidatoDotNet.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(100)]
+        [Required(ErrorMessage = "O Nome é obrigatório.")]
+        [StringLength(100)]
         public string Nome { get; set; } = string.Empty;
 
         public ICollection<NoticiaTag> NoticiaTags { get; set; } = new List<NoticiaTag>();

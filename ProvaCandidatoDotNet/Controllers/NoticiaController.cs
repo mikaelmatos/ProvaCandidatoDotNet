@@ -17,10 +17,10 @@ namespace ProvaCandidatoDotNet.Controllers
         public async Task<IActionResult> Index()
         {
             var noticias = await _context.Noticias
+                .Include(n => n.Usuario)
                 .Include(n => n.NoticiaTags)
-                .ThenInclude(nt => nt.Tag)
+                    .ThenInclude(nt => nt.Tag)
                 .OrderByDescending(n => n.DataPublicacao)
-                .AsNoTracking()
                 .ToListAsync();
 
             return View(noticias);
@@ -30,6 +30,7 @@ namespace ProvaCandidatoDotNet.Controllers
         {
             var vm = new NoticiaViewModel
             {
+                UsuariosDisponiveis = await _context.Usuarios.OrderBy(u => u.Nome).ToListAsync(),
                 TagsDisponiveis = await _context.Tags.OrderBy(t => t.Nome).ToListAsync()
             };
             return PartialView("_NoticiaFormPartial", vm);
@@ -41,7 +42,8 @@ namespace ProvaCandidatoDotNet.Controllers
                 .Include(n => n.NoticiaTags)
                 .FirstOrDefaultAsync(n => n.Id == id);
 
-            if (noticia == null) return NotFound();
+            if (noticia == null)
+                return NotFound();
 
             var vm = new NoticiaViewModel
             {
@@ -49,6 +51,8 @@ namespace ProvaCandidatoDotNet.Controllers
                 Titulo = noticia.Titulo,
                 Conteudo = noticia.Conteudo,
                 DataPublicacao = noticia.DataPublicacao,
+                UsuarioId = noticia.UsuarioId,
+                UsuariosDisponiveis = await _context.Usuarios.OrderBy(u => u.Nome).ToListAsync(),
                 TagsDisponiveis = await _context.Tags.OrderBy(t => t.Nome).ToListAsync(),
                 SelectedTagIds = noticia.NoticiaTags.Select(nt => nt.TagId).ToList()
             };
@@ -62,6 +66,7 @@ namespace ProvaCandidatoDotNet.Controllers
         {
             if (!ModelState.IsValid)
             {
+                vm.UsuariosDisponiveis = await _context.Usuarios.OrderBy(u => u.Nome).ToListAsync();
                 vm.TagsDisponiveis = await _context.Tags.OrderBy(t => t.Nome).ToListAsync();
                 return PartialView("_NoticiaFormPartial", vm);
             }
@@ -74,9 +79,9 @@ namespace ProvaCandidatoDotNet.Controllers
                 {
                     Titulo = vm.Titulo,
                     Conteudo = vm.Conteudo,
-                    DataPublicacao = vm.DataPublicacao
+                    DataPublicacao = vm.DataPublicacao,
+                    UsuarioId = vm.UsuarioId
                 };
-
                 _context.Noticias.Add(noticia);
             }
             else
@@ -85,11 +90,13 @@ namespace ProvaCandidatoDotNet.Controllers
                     .Include(n => n.NoticiaTags)
                     .FirstOrDefaultAsync(n => n.Id == vm.Id);
 
-                if (noticia == null) return NotFound();
+                if (noticia == null)
+                    return NotFound();
 
                 noticia.Titulo = vm.Titulo;
                 noticia.Conteudo = vm.Conteudo;
                 noticia.DataPublicacao = vm.DataPublicacao;
+                noticia.UsuarioId = vm.UsuarioId;
 
                 _context.NoticiaTags.RemoveRange(noticia.NoticiaTags);
                 noticia.NoticiaTags.Clear();
@@ -98,13 +105,10 @@ namespace ProvaCandidatoDotNet.Controllers
             if (vm.SelectedTagIds?.Any() == true)
             {
                 foreach (var tagId in vm.SelectedTagIds.Distinct())
-                {
                     noticia.NoticiaTags.Add(new NoticiaTag { TagId = tagId, Noticia = noticia });
-                }
             }
 
             await _context.SaveChangesAsync();
-
             return Json(new { success = true });
         }
 
@@ -113,14 +117,13 @@ namespace ProvaCandidatoDotNet.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var noticia = await _context.Noticias.FindAsync(id);
-            if (noticia == null)
-                return Json(new { success = false, message = "Notícia não encontrada." });
+            if (noticia != null)
+            {
+                _context.Noticias.Remove(noticia);
+                await _context.SaveChangesAsync();
+            }
 
-            _context.Noticias.Remove(noticia);
-            await _context.SaveChangesAsync();
-
-            return Json(new { success = true });
+            return RedirectToAction(nameof(Index));
         }
-
     }
 }
